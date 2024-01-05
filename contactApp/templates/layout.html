@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+    <title>Contact App</title>
+    <link rel="stylesheet" href="/static/site.css">
+    <script src="/static/js/htmx.js"></script>
+    <!-- <script src="/static/js/_hyperscript-0.9.7.js"></script> -->
+    <!-- <script src="/static/js/rsjs-menu.js" type="module"></script> -->
+    <!-- <script defer src="https://unpkg.com/alpinejs@3/dist/cdn.min.js"></script> -->
+</head>
+<body hx-boost="true">
+<main>
+    <header>
+        <h1> Contacts Application </h1>
+    </header>
+    {% for message in get_flashed_messages() %}
+            <div class="flash">
+                {{ message }}
+            </div>
+    {% endfor %}
+    {% block content %}{% endblock %}
+</main>
+</body>
+</html>
